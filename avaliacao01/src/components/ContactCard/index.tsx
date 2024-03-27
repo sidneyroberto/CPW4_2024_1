@@ -8,8 +8,8 @@ type Props = {
 const ContactCard = ({ name }: Props) => {
   return (
     <CardContainer>
-      <ContactIcon src={contactLogo} alt="Contato" />
-      <ContactName>{name}</ContactName>
+      <ContactIcon data-cy="contact-logo" src={contactLogo} alt="Contato" />
+      <ContactName data-cy="contact-name">{name}</ContactName>
     </CardContainer>
   );
 };

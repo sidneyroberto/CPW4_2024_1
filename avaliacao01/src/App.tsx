@@ -3,7 +3,7 @@ import { fakerPT_BR as faker } from "@faker-js/faker";
 
 import ActionButton from "./components/ActionButton";
 import Box from "./components/Box";
-import { ButtonsArea, Container } from "./globalStyles";
+import { ButtonsArea, ContactsArea, Container } from "./globalStyles";
 import ContactCard from "./components/ContactCard";
 
 const App = () => {
@@ -21,13 +21,19 @@ const App = () => {
   return (
     <Container>
       <Box>
-        <ButtonsArea>
-          <ActionButton label="Adicionar contato" onClick={addContact} />
+        <ButtonsArea data-cy="buttons-area">
+          <ActionButton
+            data-cy="add-contact"
+            label="Adicionar contato"
+            onClick={addContact}
+          />
           <ActionButton label="Limpar lista" onClick={clearContactsList} />
         </ButtonsArea>
 
-        {contacts.length > 0 &&
-          contacts.map((c, index) => <ContactCard key={index} name={c} />)}
+        <ContactsArea data-cy="contacts-area">
+          {contacts.length > 0 &&
+            contacts.map((c, index) => <ContactCard key={index} name={c} />)}
+        </ContactsArea>
       </Box>
     </Container>
   );

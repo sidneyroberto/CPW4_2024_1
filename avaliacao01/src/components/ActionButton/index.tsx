@@ -5,8 +5,12 @@ type Props = {
   onClick: () => void;
 };
 
-const AddContactButton = ({ label, onClick }: Props) => {
-  return <Button onClick={onClick}>{label}</Button>;
+const ActionButton = ({ label, onClick }: Props) => {
+  return (
+    <Button onClick={onClick} data-cy="action-button">
+      {label}
+    </Button>
+  );
 };
 
-export default AddContactButton;
+export default ActionButton;

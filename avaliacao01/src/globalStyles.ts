@@ -9,3 +9,10 @@ export const Container = styled.div`
 export const ButtonsArea = styled.div`
   margin-bottom: 10px;
 `;
+
+export const ContactsArea = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
