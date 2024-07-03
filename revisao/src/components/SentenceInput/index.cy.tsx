@@ -5,5 +5,6 @@ describe("<SentenceInput />", () => {
     const sentence = "Fala, galera!";
     const setSentence = () => {};
     cy.mount(<SentenceInput sentence={sentence} setSentence={setSentence} />);
+    cy.get("input").should("have.value", sentence);
   });
 });
