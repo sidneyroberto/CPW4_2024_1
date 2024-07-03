@@ -1,0 +1,15 @@
+.container {
+  background-color: #342d71;
+  padding: 40px;
+  width: 300px;
+  margin: auto;
+}
+
+.container input {
+  height: 25px;
+  font-size: 100%;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  border: 2px solid #aaa;
+}
