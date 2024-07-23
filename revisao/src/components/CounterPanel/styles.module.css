@@ -1,8 +1,7 @@
 .panel {
   width: 300px;
-  margin: auto;
   background-color: #0b7fab;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .panel p {
