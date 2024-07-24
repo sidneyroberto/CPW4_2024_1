@@ -14,7 +14,7 @@ const CounterPanel = ({ sentence }: Props) => {
 
   return (
     <div className={styles.panel}>
-      <p>A frase contém {count} caracteres.</p>
+      <p data-cy="counter-result">A frase contém {count} caracteres.</p>
     </div>
   );
 };

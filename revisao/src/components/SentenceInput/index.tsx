@@ -10,6 +10,7 @@ const SentenceInput = ({ sentence, setSentence }: Props) => {
     <div className={styles.container}>
       <input
         type="text"
+        data-cy="sentence-input"
         value={sentence}
         onChange={(e) => setSentence(e.target.value)}
         placeholder="Digite a frase"
