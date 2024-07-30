@@ -1,0 +1,27 @@
+.card {
+  @apply bg-slate-500 flex flex-col md:flex-row w-full md:w-3/5 text-white p-4 md:p-0;
+}
+
+.thumbArea {
+  @apply w-full md:w-1/4 p-4;
+}
+
+.thumbArea img {
+  @apply w-full rounded;
+}
+
+.contentArea {
+  @apply w-full md:w-3/4 p-4;
+}
+
+.metadata {
+  @apply mb-1;
+}
+
+.key {
+  @apply font-[bold] text-lg mr-2;
+}
+
+.value {
+  @apply font-[regular] text-lg;
+}

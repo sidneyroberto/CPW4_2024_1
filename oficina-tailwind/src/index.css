@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "bold";
+    src: url(./assets/fonts/Raleway-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: "regular";
+    src: url(./assets/fonts/Raleway-Regular.ttf);
+  }
+
+  body {
+    @apply bg-slate-700;
+  }
+}
