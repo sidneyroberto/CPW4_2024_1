@@ -1,0 +1,13 @@
+{
+  "name": "exercicio-certificados",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.13.2",
+    "typescript": "^5.5.4"
+  }
+}
