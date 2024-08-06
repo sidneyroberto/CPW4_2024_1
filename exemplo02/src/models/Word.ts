@@ -55,6 +55,5 @@ export const getWords = (jsonObj: any): Word[] | WordNotFound => {
     words.push(wordObj);
   });
 
-  console.log(words);
   return words;
 };

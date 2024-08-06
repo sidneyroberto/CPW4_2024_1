@@ -1,5 +1,5 @@
-import { useLocation, useNavigate } from 'react-router-dom';
-import { Word } from '../../models/Word';
+import { useLocation, useNavigate } from "react-router-dom";
+import { Word } from "../../models/Word";
 import {
   AudioPlayer,
   BackButton,
@@ -9,7 +9,7 @@ import {
   DetailsPanel,
   DetailsPanelTitle,
   DetailsTitle,
-} from './styles';
+} from "./styles";
 
 type Location = {
   state: {
@@ -24,14 +24,14 @@ const Details = () => {
 
   return (
     <DetailsContainer>
-      <DetailsTitle data-cy='details-title'>
+      <DetailsTitle data-cy="details-title">
         Significados de {word.term}
       </DetailsTitle>
 
       {word.meanings.length > 0 && (
-        <DetailsPanel data-cy='meanings-panel'>
+        <DetailsPanel data-cy="meanings-panel">
           <DetailsPanelTitle>Significados</DetailsPanelTitle>
-          <DetailsList data-cy='details-list'>
+          <DetailsList data-cy="details-list">
             {word.meanings.map((m, index) => (
               <DetailsMetadata key={index}>{m}</DetailsMetadata>
             ))}
@@ -40,17 +40,17 @@ const Details = () => {
       )}
 
       {word.audioUrls.length > 0 && (
-        <DetailsPanel data-cy='audios-panel'>
+        <DetailsPanel data-cy="audios-panel">
           <DetailsPanelTitle>Áudios de pronúncia</DetailsPanelTitle>
           {word.audioUrls.map((a, index) => (
-            <AudioPlayer key={index} controls data-cy='audio-player'>
-              <source src={a} type='audio/mpeg' />
+            <AudioPlayer key={index} controls data-cy="audio-player">
+              <source src={a} type="audio/mpeg" />
             </AudioPlayer>
           ))}
         </DetailsPanel>
       )}
 
-      <BackButton data-cy='back-button' onClick={() => navigate('/')}>
+      <BackButton data-cy="back-button" onClick={() => navigate("/")}>
         Voltar
       </BackButton>
     </DetailsContainer>
