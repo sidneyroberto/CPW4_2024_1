@@ -1,3 +1,4 @@
+import styles from "./styles.module.css";
 import { taskTypeIconHelper } from "../../models/TaskType";
 import { Todo } from "../../models/Todo";
 
@@ -7,14 +8,16 @@ type Props = {
 
 const TodoCard = ({ todo }: Props) => {
   return (
-    <div>
-      <div>
+    <div className={styles.card}>
+      <div className={styles.taskType}>
         <img src={taskTypeIconHelper(todo.taskType)} alt={todo.taskType} />
       </div>
 
-      <div>
-        <span>{todo.description}</span>
-        <span>{todo.deadline.toLocaleDateString()}</span>
+      <div className={styles.taskInfo}>
+        <span className={styles.taskDescription}>{todo.description}</span>
+        <span className={styles.taskDeadline}>
+          {todo.deadline.toLocaleDateString()}
+        </span>
       </div>
     </div>
   );

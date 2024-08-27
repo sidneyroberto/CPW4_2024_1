@@ -1,4 +1,6 @@
 import { FormEvent, useState } from "react";
+
+import styles from "./App.module.css";
 import { Todo } from "./models/Todo";
 import { TaskType, getTaskTypeFromString } from "./models/TaskType";
 import TodoCard from "./components/TodoCard";
@@ -25,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <form onSubmit={addTodo}>
         <label htmlFor="description">Descrição:</label>
         <input
@@ -61,7 +63,7 @@ const App = () => {
         <input type="submit" value="Adicionar" />
       </form>
 
-      <div>
+      <div className={styles.todosArea}>
         {todos.length > 0 &&
           todos.map((t, index) => <TodoCard key={index} todo={t} />)}
       </div>
